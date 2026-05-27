@@ -1,6 +1,6 @@
-use godot::{global::printerr, prelude::*};
+use godot::{prelude::*};
 use local_ip_address::local_ip;
-use std::{net::UdpSocket, ops::Add};
+use std::{net::UdpSocket};
 use rosc::{encoder, OscPacket, OscMessage};
 
 const SEND_PORT : &str = ":50505";
@@ -40,13 +40,13 @@ impl OscSender {
                 return None
             }
             Ok(addr) => {
-                address_with_port.push_str(String::from(addr).as_str());
+                address_with_port.push_str(&addr.to_string().as_str());
             }
         }
         address_with_port.push_str(SEND_PORT);
         // If socket doesn't exist, create a new one
         if self.socket.is_none() {
-            match UdpSocket::bind(local_ip().into().) {
+            match UdpSocket::bind(address_with_port) {
                 Ok(socket) => {
                     self.socket = Some(socket);
                 }
@@ -76,7 +76,7 @@ impl OscSender {
         };
 
         // Create debug string before moving args
-        let args_debug = args.iter()
+        let _args_debug = args.iter()
             .map(|arg| format!("{:?}", arg))
             .collect::<Vec<_>>()
             .join(", ");
@@ -99,12 +99,12 @@ impl OscSender {
         // Send to target
         match socket.send_to(&bytes, &target) {
             Ok(_) => {
-                #[cfg(verbose)]
+                #[cfg(feature = "verbose")]
                 godot_print!("OSC message sent to {}: {} [{}]", target, addr, args_debug);
                 true
             }
             Err(e) => {
-                godot_print!("Error sending OSC message: {}", e);
+                godot_error!("Error sending OSC message: {}", e);
                 // Invalidate socket on send error
                 self.socket = None;
                 false

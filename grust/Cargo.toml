@@ -7,6 +7,9 @@ edition = "2024"
 crate-type = ["cdylib"] # Compile this crate to a dynamic C library.
 
 [dependencies]
-godot = { version = "0.4.2", features = ["register-docs"] }
+godot = { version = "0.5.3", features = ["register-docs"] }
 local-ip-address = "0.6.13"
 rosc = "0.11.4"
+
+[features]
+verbose = []
