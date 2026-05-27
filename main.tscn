@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://eajnc78030h7"]
+
+[ext_resource type="Script" uid="uid://dpcqbbm0e20f5" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://ckh5uoo72n6l2" path="res://Hortus_Palatinus_und_Heidelberger_Schloss_von_Jacques_Fouquiere.jpg" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://dbn1lhpsenwl8" path="res://player_body.gd" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dccvcy4pjk3rw" path="res://Salomon.png" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://br07f81hmefs1" path="res://SpatialOscObject.gd" id="5_lquwl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_272bh"]
+radius = 18.027756
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mycd"]
+radius = 184.4397
+
+[node name="Main" type="Node2D" unique_id=533626156]
+script = ExtResource("1_0xm2m")
+
+[node name="Map" type="Node2D" parent="." unique_id=16311106]
+
+[node name="HortusPalatinusUndHeidelbergerSchlossVonJacquesFouquiere" type="Sprite2D" parent="Map" unique_id=770983122]
+position = Vector2(598, 270)
+texture = ExtResource("2_1bvp3")
+
+[node name="OscSender" type="OscSender" parent="." unique_id=213095623]
+unique_name_in_owner = true
+
+[node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=1605967522]
+position = Vector2(353, 321)
+script = ExtResource("3_lquwl")
+max_speed = 200.025
+acceleration = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerBody" unique_id=1694659107]
+position = Vector2(1, -0.9999924)
+scale = Vector2(0.07712402, 0.07712402)
+texture = ExtResource("4_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody" unique_id=60153239]
+shape = SubResource("CircleShape2D_272bh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1227704018]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1963633635]
+polygon = PackedVector2Array(26, 15, 1227, 4, 1152, 637, 1240, 557, 1178, 396, 1084, 390, 1082, 475, 646, 477, 650, 449, 556, 453, 597, 347, 756, 321, 707, 272, 705, 170, 658, 213, 616, 162, 575, 217, 501, 219, 471, 170, 446, 219, 365, 219, 312, 166, 171, 357, 165, 296, 101, 302, 105, 364, 90, 392, 131, 394, -46, 587, -31, 604, 31, 604, 57, 646, 494, 648, 1254, 649, 1229, 12, 1360, 618, 1186, 786, -208, 687, -219, 9)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=369792612]
+
+[node name="Fountain" type="Node2D" parent="." unique_id=958008244]
+position = Vector2(705, 558)
+script = ExtResource("5_lquwl")
+osc_address = "/game/example/"
+
+[node name="Area2D" type="Area2D" parent="Fountain" unique_id=788035283]
+position = Vector2(3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fountain/Area2D" unique_id=1506500772]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_7mycd")
+
+[connection signal="body_entered" from="Fountain/Area2D" to="Fountain" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Fountain/Area2D" to="Fountain" method="_on_area_2d_body_exited"]
