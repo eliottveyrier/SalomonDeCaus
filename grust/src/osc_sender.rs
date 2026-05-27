@@ -1,8 +1,7 @@
 use godot::prelude::*;
 use rosc::{OscMessage, OscPacket, encoder};
-use std::net::{SocketAddr, UdpSocket};
+use std::net::{Ipv4Addr, SocketAddr, UdpSocket};
 
-const SEND_PORT: u16 = 50505;
 
 /// A Godot node for sending OSC (Open Sound Control) messages over UDP.
 ///
@@ -33,7 +32,7 @@ impl OscSender {
         // If socket doesn't exist, create a new one
         if self.socket.is_none() {
             // bind socket
-            let addr = SocketAddr::from(([127, 0, 0, 1], SEND_PORT));
+            let addr = SocketAddr::from((Ipv4Addr::UNSPECIFIED, 0)); // 0 lets the OS pick a free port
             match UdpSocket::bind(addr) {
                 Ok(socket) => {
                     self.socket = Some(socket);
@@ -50,6 +49,7 @@ impl OscSender {
 
     /// Internal helper to send an OSC message with the given arguments.
     fn _send_message(&mut self, addr: String, args: Vec<rosc::OscType>) -> bool {
+        godot_print!("{}", &addr);
         if self.target.is_empty() {
             godot_print!("Error: No target configured");
             return false;
@@ -93,6 +93,7 @@ impl OscSender {
                 true
             }
             Err(e) => {
+                godot_print!("failed to send to {}", &target);
                 godot_error!("Error sending OSC message: {}", e);
                 // Invalidate socket on send error
                 self.socket = None;

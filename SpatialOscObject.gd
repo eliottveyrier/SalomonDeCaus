@@ -38,4 +38,4 @@ func _process(delta):
 		_old_position = pos_in_player_space
 		var senders = OscSettings.get_senders()
 		for sender in senders:
-			senders[sender].send_pos(osc_address + "/pos", pos_in_player_space)
+			senders[sender].send_pos(osc_address + "pos", pos_in_player_space)
