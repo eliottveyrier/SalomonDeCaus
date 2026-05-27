@@ -1,9 +1,8 @@
-use godot::{prelude::*};
-use local_ip_address::local_ip;
-use std::{net::UdpSocket};
-use rosc::{encoder, OscPacket, OscMessage};
+use godot::prelude::*;
+use rosc::{OscMessage, OscPacket, encoder};
+use std::net::{SocketAddr, UdpSocket};
 
-const SEND_PORT : &str = ":50505";
+const SEND_PORT: u16 = 50505;
 
 /// A Godot node for sending OSC (Open Sound Control) messages over UDP.
 ///
@@ -31,22 +30,11 @@ impl OscSender {
 
     /// Gets the socket, creating one if needed.
     fn get_or_create_socket(&mut self) -> Option<&UdpSocket> {
-        // build local address : XXX.XXX.XXX.XXX:50505
-        let addr = local_ip();
-        let mut address_with_port = String::with_capacity(21);
-        match addr {
-            Err(e) => {
-                godot_error!("Error fetching local IP when initializing UDP socket: {}", e);
-                return None
-            }
-            Ok(addr) => {
-                address_with_port.push_str(&addr.to_string().as_str());
-            }
-        }
-        address_with_port.push_str(SEND_PORT);
         // If socket doesn't exist, create a new one
         if self.socket.is_none() {
-            match UdpSocket::bind(address_with_port) {
+            // bind socket
+            let addr = SocketAddr::from(([127, 0, 0, 1], SEND_PORT));
+            match UdpSocket::bind(addr) {
                 Ok(socket) => {
                     self.socket = Some(socket);
                 }
@@ -66,7 +54,7 @@ impl OscSender {
             godot_print!("Error: No target configured");
             return false;
         }
-        
+
         let target = self.target.to_string();
 
         // Get or create the persistent socket
@@ -76,7 +64,8 @@ impl OscSender {
         };
 
         // Create debug string before moving args
-        let _args_debug = args.iter()
+        let _args_debug = args
+            .iter()
             .map(|arg| format!("{:?}", arg))
             .collect::<Vec<_>>()
             .join(", ");
@@ -143,10 +132,7 @@ impl OscSender {
     /// `true` if the message was sent successfully, `false` otherwise.
     #[func]
     fn send_pos(&mut self, addr: String, pos: Vector2) -> bool {
-        let osc_args = vec![
-            rosc::OscType::Float(pos.x),
-            rosc::OscType::Float(pos.y),
-        ];
+        let osc_args = vec![rosc::OscType::Float(pos.x), rosc::OscType::Float(pos.y)];
         self._send_message(addr, osc_args)
     }
 

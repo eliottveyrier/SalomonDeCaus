@@ -44,9 +44,9 @@ An experienced user will find easy to reverse this decision, if needed, and a ne
 
 4. Build the Rust code:
    - In the terminal, go to the project `grust` directory and run:
-     ```
-     cargo build
-     ```
+	 ```
+	 cargo build
+	 ```
 
 5. Run the project from Godot.
 

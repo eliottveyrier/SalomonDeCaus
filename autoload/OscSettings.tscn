@@ -6,7 +6,7 @@
 script = ExtResource("1_euqxo")
 
 [node name="EliottOscSender" type="OscSender" parent="." unique_id=459419509]
-target = "127.0.0.1:57120"
+target = "192.168.1.16:60606"
 
 [node name="LaurentOscSender" type="OscSender" parent="." unique_id=497977628]
-target = "127.0.0.1:57120"
+target = "192.168.1.16:60609"
