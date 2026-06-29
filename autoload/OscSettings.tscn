@@ -9,4 +9,4 @@ script = ExtResource("1_euqxo")
 target = "192.168.1.16:50509"
 
 [node name="LaurentOscSender" type="OscSender" parent="." unique_id=497977628]
-target = "192.168.1.16:50506"
+target = "192.168.0.3:10000"

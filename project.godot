@@ -14,10 +14,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Rust Template Godot"
-config/description="Minimal Template Project based on the Getting Started Guide from the Godot Rust Book."
+config/name="Hortus Palatinus"
+config/description="Interactive art project for Salomon de Caus' 400th anniversary"
 config/version="1.1.0"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://bhxnt5ih4kgma"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="uid://dl0701ikiyhue"
 
