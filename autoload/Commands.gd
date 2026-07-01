@@ -30,9 +30,13 @@ func error(...args):
 	log.emit(s, LOG_LEVEL_ERR)
 
 var registered_commands : Dictionary[String,Callable] = {
-	"hello" : func (...args): Commands.info("hola my friend!"),
-	"hola" : func (...args): Commands.info("hola !", args)
+	"hello" : func (...args): Commands.info("Auf Wiedersehen!!"),
+	"help" : func (...args): Commands.list_commands()
 }
+
+func list_commands():
+	for name in registered_commands:
+		info(name)
 
 func register(name, callable):
 	registered_commands[name] = callable
@@ -64,4 +68,5 @@ func handle_command(cmd : String):
 			return
 		var command_function : Callable = registered_commands.get(cmd_name)
 		command_function.callv(split.slice(1))
+		info("------")
 		

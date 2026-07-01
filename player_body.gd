@@ -9,19 +9,11 @@ class_name Player
 ### The target to move on the scenography
 @export var target : Node2D
 
-@onready var _old_pos : Vector2 = position 
+var _old_X : float 
+var _old_Y : float
 
 func _process(_delta):
-	if position == _old_pos:
-		return
-	_old_pos = position
-	var x = position.x
-	var y = position.y
-	var senders = OscSettings.get_senders()
-	for name in senders:
-		var sender : OscSender = senders[name]
-		sender.send_float(osc_address_x , x/1000.)
-		sender.send_float(osc_address_y , y/1000.)
+	broadcast_position_osc()
 
 
 func _physics_process(delta):
@@ -55,6 +47,21 @@ func _translate_to_perspective() -> Vector2 :
 	if grand_x > 6.8 and grand_y > 9:
 		yprime += -40
 	return Vector2(xprime,yprime)
+
+func broadcast_position_osc():
+	var x = global_position.x
+	var y = global_position.y
+	var X = 0.01156 * (x - 148)
+	var Y = 0.01156 * (y - 438)
+	if _old_X == X && _old_Y == Y:
+		return
+	_old_X = X
+	_old_Y = Y
+	var senders = OscSettings.get_senders()
+	for name in senders:
+		var sender : OscSender = senders[name]
+		sender.send_float(osc_address_x , X)
+		sender.send_float(osc_address_y , Y)
 
 func _translate_to_perspective_v2() -> Vector2:
 	var x = global_position.x

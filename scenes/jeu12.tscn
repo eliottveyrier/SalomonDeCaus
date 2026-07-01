@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bd358eaeifee4"]
+
+[ext_resource type="Script" uid="uid://hqsmq45cwrgx" path="res://jeu_5.gd" id="1_5le5c"]
+[ext_resource type="Texture2D" uid="uid://bp080kbgcyy6v" path="res://assets/Jeu12_roue_int.png" id="2_qjy3u"]
+[ext_resource type="Texture2D" uid="uid://drnwwcg8fwjxp" path="res://assets/Jeu12_roue_ext.png" id="3_jctft"]
+[ext_resource type="Texture2D" uid="uid://b7r7nbemo66im" path="res://assets/jeu12.png" id="4_ma162"]
+[ext_resource type="Script" uid="uid://dps7ajndnnmjo" path="res://scenes/ombre.gd" id="5_qjy3u"]
+
+[node name="Jeu12" type="Node2D" unique_id=748132016]
+script = ExtResource("1_5le5c")
+
+[node name="RoueInterieure" type="Sprite2D" parent="." unique_id=854272521]
+position = Vector2(941, 419)
+texture = ExtResource("2_qjy3u")
+offset = Vector2(-41, 20)
+
+[node name="RoueExterieure" type="Sprite2D" parent="." unique_id=535396067]
+position = Vector2(941, 419)
+texture = ExtResource("3_jctft")
+offset = Vector2(-41, 20)
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=929842964]
+position = Vector2(941, 419)
+texture = ExtResource("4_ma162")
+offset = Vector2(-41, 20)
+
+[node name="Ombre1" type="Polygon2D" parent="." unique_id=1419972484]
+modulate = Color(0.12239999, 0.13416001, 0.24, 0.67058825)
+position = Vector2(896, 465)
+antialiased = true
+polygon = PackedVector2Array(-2, -97, 89, -97, 89, -4, -2, -4)
+uv = PackedVector2Array(-4, -97, 90, -97, 91, -4, -4, -5)
+script = ExtResource("5_qjy3u")
+tip = Vector2(-100, -100)
