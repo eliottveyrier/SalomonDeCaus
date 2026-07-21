@@ -1,5 +1,5 @@
 ## Hortus Palatinus
-
+![Screenshot](screenshot.png)
 ### An interactive concert
 
 From archive scans of engravings of the original designs of the [Hortus Palatinus](https://en.wikipedia.org/wiki/Hortus_Palatinus) garden in heidelberg, this project was an interactive installation
