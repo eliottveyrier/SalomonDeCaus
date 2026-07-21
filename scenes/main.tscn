@@ -1,0 +1,979 @@
+[gd_scene format=3 uid="uid://bhxnt5ih4kgma"]
+
+[ext_resource type="Texture2D" uid="uid://bh8qamnvlaosd" path="res://assets/Iconographie avec cadres.png" id="1_7mycd"]
+[ext_resource type="Script" uid="uid://dpcqbbm0e20f5" path="res://scripts/main.gd" id="1_272bh"]
+[ext_resource type="Script" uid="uid://dbn1lhpsenwl8" path="res://scripts/player_body.gd" id="2_272bh"]
+[ext_resource type="Texture2D" uid="uid://dccvcy4pjk3rw" path="res://assets/Salomon.png" id="3_5vw27"]
+[ext_resource type="Texture2D" uid="uid://n4qmetjoltk1" path="res://assets/Iconographie avec barrières simplifiées.png" id="3_seu75"]
+[ext_resource type="Texture2D" uid="uid://d0jycu5p3smk3" path="res://assets/Iconographie.png" id="4_jq2sk"]
+[ext_resource type="Script" uid="uid://c04hg6ldhqjg7" path="res://scripts/visuel.gd" id="4_kek77"]
+[ext_resource type="Texture2D" uid="uid://dilfwhy4h0tbt" path="res://Scénographie.png" id="5_4c57u"]
+[ext_resource type="Texture2D" uid="uid://ch71buyolidb2" path="res://assets/salomon_smol.png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://c1ujyn4kxslhm" path="res://assets/marion/arbre_detoure.png" id="7_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://cognlacidldxx" path="res://assets/marion/hp_19.png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://bvvfmeb7eiajf" path="res://assets/marion/hp_5_3d.png" id="8_a6jrf"]
+[ext_resource type="Texture2D" uid="uid://eg2lm3mgb0q6" path="res://assets/marion/hp_14_3d.png" id="8_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://xiexmsy80yw3" path="res://assets/marion/hp_6_3d.png" id="9_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://cyqrafvxke5l5" path="res://assets/marion/hp_7.png" id="10_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://w23cnk6tw30c" path="res://assets/marion/hp_8_statues.png" id="11_kq58d"]
+[ext_resource type="Texture2D" uid="uid://crobks5x82tnj" path="res://assets/marion/hp_9_3d.png" id="12_seu75"]
+[ext_resource type="Texture2D" uid="uid://cb3l6mqi6lc7a" path="res://assets/marion/hp_11.png" id="13_htxhm"]
+[ext_resource type="Texture2D" uid="uid://b23jhv8v86rnu" path="res://assets/marion/hp_10_facade.png" id="14_jq2sk"]
+[ext_resource type="Texture2D" uid="uid://dqgkv4fg646fy" path="res://assets/marion/hp_12.png" id="15_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://bmcgbs62mo5xi" path="res://assets/marion/Hp_13_facade.png" id="16_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://dalumtrssp4ma" path="res://assets/marion/hp_15.png" id="17_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://ysq4w1hckuxk" path="res://assets/marion/hp_16.png" id="18_facbu"]
+[ext_resource type="Texture2D" uid="uid://dqd2iar3x5m14" path="res://assets/marion/hp_17.png" id="19_b1qrp"]
+[ext_resource type="Texture2D" uid="uid://bd26hafekc51c" path="res://assets/marion/hp_18_3d.png" id="20_come4"]
+[ext_resource type="Texture2D" uid="uid://dpb7q5bq8hppv" path="res://assets/marion/hp_21.png" id="22_h8e4i"]
+[ext_resource type="Texture2D" uid="uid://6d8w42qa0o0r" path="res://assets/marion/hp_24.png" id="23_4lmeg"]
+[ext_resource type="Texture2D" uid="uid://demq574aeepj2" path="res://assets/marion/hp_26.png" id="24_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://bqsw4t68jb7cm" path="res://assets/marion/hp_20.png" id="25_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://00a8tqm61ihf" path="res://assets/marion/hp_3_3d.png" id="26_gngh3"]
+[ext_resource type="Texture2D" uid="uid://brvhvjak320xm" path="res://assets/marion/hp_4.png" id="27_0n3wm"]
+[ext_resource type="PackedScene" uid="uid://bd358eaeifee4" path="res://scenes/jeu12.tscn" id="30_kq58d"]
+[ext_resource type="Texture2D" uid="uid://decy38bdyqndn" path="res://assets/BlankPage.png" id="31_ok6jj"]
+[ext_resource type="Script" uid="uid://ddwqsvc4hdw33" path="res://scripts/minimap_camera.gd" id="32_4k2k6"]
+[ext_resource type="SystemFont" uid="uid://dovoxkgo27cq0" path="res://assets/handwritten_system_font.tres" id="32_facbu"]
+[ext_resource type="FontFile" uid="uid://c4kg8eedyo5yt" path="res://assets/Handwriting-Regular.otf" id="32_htxhm"]
+[ext_resource type="Texture2D" uid="uid://dt218ens3o4et" path="res://assets/Interrogation.png" id="34_facbu"]
+[ext_resource type="PackedScene" uid="uid://cuvl58lmvyv3k" path="res://scenes/jeu_6.tscn" id="36_b1qrp"]
+[ext_resource type="Script" uid="uid://cppco748jmftv" path="res://scripts/help_on_h.gd" id="37_0cp0l"]
+[ext_resource type="PackedScene" uid="uid://busldc7u8do0" path="res://scenes/jeu_5.tscn" id="37_d2t1y"]
+[ext_resource type="Script" uid="uid://dswbwd63exiln" path="res://scripts/cave.gd" id="38_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="38_d2t1y"]
+[ext_resource type="PackedScene" uid="uid://b82xr4sjohnjy" path="res://scenes/marker_jeu_26.tscn" id="38_gngh3"]
+[ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="39_gngh3"]
+[ext_resource type="Texture2D" uid="uid://bhiec4m01fydv" path="res://assets/Player2.png" id="40_0n3wm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b2a1t"]
+friction = 0.06
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_seu75"]
+b = Vector2(-1, 983)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_facbu"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kobsv"]
+radius = 3.0
+
+[sub_resource type="Animation" id="Animation_272bh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5vw27"]
+resource_name = "idle"
+length = 0.8333333
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.21991149, -0.07166667, -0.036651917, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-1.26, 0, 0.23333333, 0.53333336)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kek77"]
+_data = {
+&"RESET": SubResource("Animation_272bh"),
+&"idle": SubResource("Animation_5vw27")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2a1t"]
+size = Vector2(85.5, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnost"]
+size = Vector2(69, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnkbs"]
+size = Vector2(61, 214)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6a44"]
+size = Vector2(117, 653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cbny"]
+size = Vector2(119, 418)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrvbo"]
+size = Vector2(100, 590)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uypp3"]
+size = Vector2(195, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blkrb"]
+size = Vector2(133, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abqjc"]
+size = Vector2(261, 263)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iyjs"]
+size = Vector2(276, 271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuqvo"]
+size = Vector2(90, 338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w656"]
+size = Vector2(84, 76)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
+bg_color = Color(0.15686275, 0.69411767, 0.27450982, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gngh3"]
+bg_color = Color(0.22008058, 0.983893, 0.3941994, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Texture2D" id="Texture2D_0n3wm"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("39_gngh3")
+path = "joypad/r_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n3wm"]
+bg_color = Color(0.95214635, 0.6117855, 0.9898136, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Texture2D" id="Texture2D_wnkbs"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("39_gngh3")
+path = "joypad/r_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="Texture2D" id="Texture2D_f6a44"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("39_gngh3")
+path = "joypad/l_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4k2k6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Texture2D" id="Texture2D_qnost"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("39_gngh3")
+path = "joypad/l_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[node name="Node2D" type="Node2D" unique_id=709502747]
+script = ExtResource("1_272bh")
+
+[node name="Plan" type="Node2D" parent="." unique_id=336887124]
+
+[node name="IconographieAvecCadres" type="Sprite2D" parent="Plan" unique_id=1334527794]
+texture = ExtResource("1_7mycd")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="IconographieCollisionsSimples" type="Sprite2D" parent="Plan" unique_id=409944192]
+texture = ExtResource("3_seu75")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Collisions" type="Node2D" parent="Plan" unique_id=1392350563]
+
+[node name="WorldCollisions" type="StaticBody2D" parent="Plan/Collisions" unique_id=655941004]
+physics_material_override = SubResource("PhysicsMaterial_b2a1t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plan/Collisions/WorldCollisions" unique_id=1818027387]
+polygon = PackedVector2Array(120, 3213, 783, 3228, 781, 3022, 740, 3019, 746, 1817, 921, 1816, 924, 1527, 1432, 1522, 1432, 1216, 1533, 1213, 2351, 3688, 96, 3667)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Plan/Collisions/WorldCollisions" unique_id=674743512]
+polygon = PackedVector2Array(127, 3216, 140, 1426, 49, 1326, 59, 1073, 54, 645, 76, 644, 75, 593, 145, 456, 149, 418, -48, 491, -101, 3670, 192, 3611)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Plan/Collisions/WorldCollisions" unique_id=2081691041]
+polygon = PackedVector2Array(150, 439, 220, 437, 264.92316, 417.71164, 1355, 415, 1377, 366, 1456, 361, 1459, 304, 1579, 304, 1615, 272, 1649, 272, 1674, 288, 1689, 294, 1688, 348, 1771, 341, 1807.289, 346.8372, 2212, 347, 2287, 424, 2285, 508, 1668, 510, 1659, 814, 1606, 849, 1574, 892, 1550, 937, 1538, 973, 1537, 1211, 1473, 1316, 2233, 1195, 2402, 409, 1930, 101, 70, 161, 61, 496)
+
+[node name="ImportantCollisions" type="StaticBody2D" parent="Plan/Collisions" unique_id=589789468]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plan/Collisions/ImportantCollisions" unique_id=95182166]
+position = Vector2(240, 683)
+shape = SubResource("SegmentShape2D_seu75")
+disabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plan/Collisions/ImportantCollisions" unique_id=726648058]
+polygon = PackedVector2Array(263, 1669, 578, 1670, 577, 2259, 335, 2258, 322, 3182, 198, 3220, 205, 2248, 568, 2248, 571, 1678, 266, 1676)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Plan/Collisions/ImportantCollisions" unique_id=365145603]
+polygon = PackedVector2Array(2284, 498, 1666, 676, 1660, 501)
+
+[node name="OptionalCollisions" type="StaticBody2D" parent="Plan/Collisions" unique_id=2020734852]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plan/Collisions/OptionalCollisions" unique_id=308960439]
+polygon = PackedVector2Array(738, 1488, 746, 1489, 745, 1213, 737, 1216)
+disabled = true
+
+[node name="Labyrinthe" type="StaticBody2D" parent="Plan/Collisions" unique_id=413668727]
+physics_material_override = SubResource("PhysicsMaterial_facbu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1915518768]
+polygon = PackedVector2Array(407, 1948, 401, 1949, 394, 1920, 378, 1903, 359, 1899, 338, 1909, 327, 1926, 322, 1950, 317, 1951, 325, 1916, 341, 1897, 362, 1891, 385, 1899, 398, 1915)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1677008726]
+polygon = PackedVector2Array(399, 1984, 397, 2009, 384, 2027, 364, 2034, 345, 2030, 334, 2017, 327, 2000, 323, 1984, 317, 1984, 320, 2003, 327, 2019, 340, 2033, 359, 2041, 376, 2037, 391, 2029, 401, 2012, 407, 1985)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=654977243]
+polygon = PackedVector2Array(377, 2065, 380, 2071, 410, 2055, 426, 2031, 435, 2001, 435, 1937, 424, 1901, 406, 1875, 379, 1866, 379, 1871, 404, 1881, 419, 1903, 430, 1939, 429, 1998, 421, 2029, 407, 2049)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1426703483]
+polygon = PackedVector2Array(349, 1866, 320, 1876, 309, 1891, 293, 1926, 293, 1986, 304, 2030, 316, 2054, 344, 2069, 347, 2065, 318, 2048, 306, 2022, 296, 1979, 299, 1928, 314, 1893, 324, 1880, 349, 1870)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1613681382]
+polygon = PackedVector2Array(264, 1940, 259, 1945, 266, 1884, 288, 1837, 347, 1792, 372, 1791, 425, 1822, 453, 1869, 469, 1950, 463, 1950, 450, 1885, 440, 1880, 418, 1848, 378, 1826, 331, 1833, 306, 1853, 287, 1872, 275, 1881)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1215372325]
+polygon = PackedVector2Array(466, 1986, 457, 2051, 437, 2097, 403, 2128, 367, 2140, 326, 2126, 289, 2075, 272, 2049, 259, 1981, 266, 1983, 277, 2045, 287, 2054, 315, 2082, 354, 2102, 400, 2096, 428, 2060, 442, 2050, 450, 2046, 461, 1986)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1511316027]
+polygon = PackedVector2Array(379, 2168, 424, 2156, 458, 2120, 480, 2079, 495, 2003, 494, 1925, 477, 1835, 422, 1774, 379, 1756, 383, 1765, 422, 1784, 471, 1840, 488, 1931, 489, 2006, 477, 2068, 454, 2115, 421, 2149)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=761562674]
+polygon = PackedVector2Array(347, 2161, 311, 2144, 291, 2124, 267, 2088, 241, 2012, 238, 1912, 254, 1853, 278, 1816, 275, 1804, 324, 1767, 349, 1761, 348, 1755, 321, 1761, 271, 1801, 256, 1839, 237, 1891, 237, 2015, 265, 2091, 290, 2128, 310, 2149, 347, 2167)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=1723305129]
+polygon = PackedVector2Array(513, 1949, 507, 1860, 488, 1806, 453, 1761, 414, 1738, 368, 1729, 315, 1740, 258, 1777, 241, 1812, 224, 1868, 217, 1944, 209, 1945, 215, 1885, 230, 1832, 246, 1786, 272, 1758, 316, 1732, 381, 1725, 444, 1746, 482, 1787, 504, 1830, 517, 1903)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Plan/Collisions/Labyrinthe" unique_id=524307405]
+polygon = PackedVector2Array(517, 1986, 515, 2056, 506, 2093, 488, 2127, 464, 2161, 440, 2181, 412, 2192, 342, 2194, 288, 2170, 243, 2114, 218, 2035, 211, 1984, 218, 1984, 226, 2046, 251, 2116, 287, 2164, 345, 2190, 409, 2188, 439, 2175, 464, 2153, 483, 2126, 505, 2082, 512, 2021, 513, 1988)
+
+[node name="CharacterInPlan" type="CharacterBody2D" parent="." unique_id=463343674 node_paths=PackedStringArray("target")]
+position = Vector2(816, 917)
+script = ExtResource("2_272bh")
+max_speed = 60.0
+acceleration = 400.0
+osc_address_x = "/oscControl/slider2Dx"
+osc_address_y = "/oscControl/slider2Dy"
+target = NodePath("../PlayerMarker")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterInPlan" unique_id=1819369949]
+shape = SubResource("CircleShape2D_kobsv")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterInPlan" unique_id=887328113]
+visible = false
+modulate = Color(1, 0.07858916, 0.5166952, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_5vw27")
+
+[node name="Scénographie" type="Sprite2D" parent="." unique_id=1919310982]
+texture = ExtResource("5_4c57u")
+centered = false
+
+[node name="PlayerMarker" type="Node2D" parent="." unique_id=789481055]
+
+[node name="PlayerSprite" type="Sprite2D" parent="PlayerMarker" unique_id=1275120227]
+position = Vector2(6, -5)
+texture = ExtResource("7_272bh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerMarker/PlayerSprite" unique_id=412150547]
+libraries/ = SubResource("AnimationLibrary_kek77")
+autoplay = &"idle"
+
+[node name="arbre" type="Sprite2D" parent="." unique_id=356238808]
+modulate = Color(1, 1, 1, 0.45882353)
+texture = ExtResource("7_qsp4k")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1854504110]
+position = Vector2(0, 340)
+anchor_mode = 0
+zoom = Vector2(0.409, 0.409)
+
+[node name="Areas" type="Node2D" parent="." unique_id=297813876]
+
+[node name="19" type="Area2D" parent="Areas" unique_id=1671434393 node_paths=PackedStringArray("target")]
+position = Vector2(55, 715)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp19")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/19" unique_id=1385616665]
+position = Vector2(46.75, 94)
+shape = SubResource("RectangleShape2D_b2a1t")
+
+[node name="20" type="Area2D" parent="Areas" unique_id=184434623 node_paths=PackedStringArray("target")]
+position = Vector2(146, 441)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/20" unique_id=198491195]
+position = Vector2(38.5, 35.5)
+shape = SubResource("RectangleShape2D_qnost")
+
+[node name="21" type="Area2D" parent="Areas" unique_id=403007777 node_paths=PackedStringArray("target")]
+position = Vector2(146, 648)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/21" unique_id=1277500950]
+position = Vector2(34.5, 111)
+shape = SubResource("RectangleShape2D_wnkbs")
+
+[node name="24" type="Area2D" parent="Areas" unique_id=508781981 node_paths=PackedStringArray("target")]
+position = Vector2(269, 533)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/24" unique_id=571173844]
+position = Vector2(62.5, 330.5)
+shape = SubResource("RectangleShape2D_f6a44")
+
+[node name="7" type="Area2D" parent="Areas" unique_id=815596244 node_paths=PackedStringArray("target")]
+position = Vector2(269, 1221)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/7et8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/7" unique_id=1776905176]
+position = Vector2(63.5, 213)
+shape = SubResource("RectangleShape2D_0cbny")
+
+[node name="9" type="Area2D" parent="Areas" unique_id=831864177 node_paths=PackedStringArray("target")]
+position = Vector2(589, 1666)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/9et10et11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/9" unique_id=452800245]
+position = Vector2(54, 299)
+shape = SubResource("RectangleShape2D_hrvbo")
+
+[node name="14" type="Area2D" parent="Areas" unique_id=1249922675 node_paths=PackedStringArray("target")]
+position = Vector2(803, 1279)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp143d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/14" unique_id=799914374]
+position = Vector2(101.5, 89)
+shape = SubResource("RectangleShape2D_uypp3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Areas/14" unique_id=448970957]
+position = Vector2(464, 89)
+shape = SubResource("RectangleShape2D_uypp3")
+
+[node name="15" type="Area2D" parent="Areas" unique_id=853650310 node_paths=PackedStringArray("target")]
+position = Vector2(1018, 1279)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/15" unique_id=1373300762]
+position = Vector2(70.5, 88.5)
+shape = SubResource("RectangleShape2D_blkrb")
+
+[node name="3" type="Area2D" parent="Areas" unique_id=2023224818 node_paths=PackedStringArray("target")]
+position = Vector2(420, 778)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/3et4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/3" unique_id=1597640072]
+position = Vector2(134.5, 135.5)
+shape = SubResource("RectangleShape2D_abqjc")
+
+[node name="16" type="Area2D" parent="Areas" unique_id=818364824 node_paths=PackedStringArray("target")]
+position = Vector2(1233, 778)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/16" unique_id=2043350491]
+position = Vector2(135, 133.5)
+shape = SubResource("RectangleShape2D_6iyjs")
+
+[node name="17" type="Area2D" parent="Areas" unique_id=782221907 node_paths=PackedStringArray("target")]
+position = Vector2(56, 982)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/17" unique_id=1774927846]
+position = Vector2(49, 173)
+shape = SubResource("RectangleShape2D_xuqvo")
+
+[node name="18" type="Area2D" parent="Areas" unique_id=1900745689 node_paths=PackedStringArray("target")]
+position = Vector2(55, 904)
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Hp183d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/18" unique_id=973705338]
+position = Vector2(45, 37)
+shape = SubResource("RectangleShape2D_4w656")
+
+[node name="12" type="Area2D" parent="Areas" unique_id=1721967917 node_paths=PackedStringArray("target")]
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Jeu12")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/12" unique_id=1987016384]
+polygon = PackedVector2Array(345, 2284, 336, 3009, 702, 3016, 708, 2280)
+
+[node name="L" type="Area2D" parent="Areas" unique_id=181873225 node_paths=PackedStringArray("target")]
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/L")
+metadata/_custom_type_script = "uid://c04hg6ldhqjg7"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/L" unique_id=1572503015]
+polygon = PackedVector2Array(205, 1721, 209, 2205, 526, 2202, 523, 1720)
+
+[node name="5" type="Area2D" parent="Areas" unique_id=1389825450 node_paths=PackedStringArray("target")]
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Jeu5")
+metadata/_custom_type_script = "uid://c04hg6ldhqjg7"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/5" unique_id=275839159]
+polygon = PackedVector2Array(414, 1073, 416, 1348, 686, 1345, 684, 1070)
+
+[node name="6" type="Area2D" parent="Areas" unique_id=36960362 node_paths=PackedStringArray("target")]
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/Jeu6")
+metadata/_custom_type_script = "uid://c04hg6ldhqjg7"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/6" unique_id=1184119845]
+polygon = PackedVector2Array(698, 1369, 698, 1649, 406, 1645, 405, 1366)
+
+[node name="G" type="Area2D" parent="Areas" unique_id=1608720541 node_paths=PackedStringArray("target")]
+script = ExtResource("4_kek77")
+target = NodePath("../../MiniGames/G")
+metadata/_custom_type_script = "uid://c04hg6ldhqjg7"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/G" unique_id=1165808714]
+polygon = PackedVector2Array(1361, 301, 1362, 471, 1707, 467, 1679, 269)
+
+[node name="MiniGames" type="Node2D" parent="." unique_id=394730576]
+position = Vector2(55, 715)
+
+[node name="Hp143d" type="Sprite2D" parent="MiniGames" unique_id=1669980514]
+visible = false
+position = Vector2(3381, 396)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_xuqvo")
+
+[node name="Hp53d" type="Sprite2D" parent="MiniGames" unique_id=697908295]
+visible = false
+position = Vector2(3220, 349)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_a6jrf")
+
+[node name="Hp63d" type="Sprite2D" parent="MiniGames" unique_id=1272622993]
+visible = false
+position = Vector2(3190, 376)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("9_xuqvo")
+
+[node name="7et8" type="Node2D" parent="MiniGames" unique_id=764671434]
+visible = false
+
+[node name="Hp7" type="Sprite2D" parent="MiniGames/7et8" unique_id=1935112617]
+position = Vector2(4190, 585)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_qsp4k")
+
+[node name="Hp8Statues" type="Sprite2D" parent="MiniGames/7et8" unique_id=1097542235]
+position = Vector2(2942, 393)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_kq58d")
+
+[node name="9et10et11" type="Node2D" parent="MiniGames" unique_id=698699849]
+visible = false
+
+[node name="Hp93d" type="Sprite2D" parent="MiniGames/9et10et11" unique_id=243977053]
+position = Vector2(3435, -8.999985)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_seu75")
+
+[node name="Hp11" type="Sprite2D" parent="MiniGames/9et10et11" unique_id=2049914888]
+position = Vector2(3648.0002, 1187)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_htxhm")
+
+[node name="Hp10Facade" type="Sprite2D" parent="MiniGames/9et10et11" unique_id=1307433735]
+position = Vector2(3725.0002, 488.00006)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_jq2sk")
+
+[node name="Hp12" type="Sprite2D" parent="MiniGames" unique_id=1731978804]
+visible = false
+position = Vector2(3341, 493)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_4k2k6")
+
+[node name="Hp13Facade" type="Sprite2D" parent="MiniGames" unique_id=1912610071]
+visible = false
+position = Vector2(3474, 603)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_0rl1p")
+
+[node name="Hp15" type="Sprite2D" parent="MiniGames" unique_id=1663740611]
+visible = false
+position = Vector2(3414, 613)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_ok6jj")
+
+[node name="Hp16" type="Sprite2D" parent="MiniGames" unique_id=1768210494]
+visible = false
+position = Vector2(3336, 538)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_facbu")
+
+[node name="Hp17" type="Sprite2D" parent="MiniGames" unique_id=1563628796]
+visible = false
+position = Vector2(3063, 380)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_b1qrp")
+
+[node name="Hp183d" type="Sprite2D" parent="MiniGames" unique_id=1354717277]
+visible = false
+position = Vector2(3250, 489)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_come4")
+
+[node name="Hp19" type="Sprite2D" parent="MiniGames" unique_id=1541120584]
+visible = false
+position = Vector2(3328, 524)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_5vw27")
+
+[node name="Hp21" type="Sprite2D" parent="MiniGames" unique_id=52526726]
+visible = false
+position = Vector2(3344, 494)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_h8e4i")
+
+[node name="Hp24" type="Sprite2D" parent="MiniGames" unique_id=1402027503]
+visible = false
+position = Vector2(3335, 467)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("23_4lmeg")
+
+[node name="Hp26" type="Sprite2D" parent="MiniGames" unique_id=1401059398]
+visible = false
+position = Vector2(3350, 617)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_0cp0l")
+
+[node name="Hp20" type="Sprite2D" parent="MiniGames" unique_id=1111271147]
+visible = false
+position = Vector2(3387.0002, 524)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("25_d2t1y")
+
+[node name="3et4" type="Node2D" parent="MiniGames" unique_id=1539134061]
+visible = false
+
+[node name="Hp33d" type="Sprite2D" parent="MiniGames/3et4" unique_id=1476696923]
+position = Vector2(2670, 146)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("26_gngh3")
+
+[node name="Hp4" type="Sprite2D" parent="MiniGames/3et4" unique_id=256150302]
+position = Vector2(4133, 241)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("27_0n3wm")
+
+[node name="L" type="Node2D" parent="MiniGames" unique_id=589300189]
+visible = false
+
+[node name="BlankPage" type="Sprite2D" parent="MiniGames/L" unique_id=1168095045]
+position = Vector2(3270, 355)
+scale = Vector2(1, 0.8808463)
+texture = ExtResource("31_ok6jj")
+
+[node name="Control" type="Control" parent="MiniGames/L/BlankPage" unique_id=1996035407]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -876.0
+offset_top = -272.46527
+offset_right = 862.0
+offset_bottom = 639.1579
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MiniGames/L/BlankPage/Control" unique_id=622105085]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 35.193428
+offset_right = 1797.0
+offset_bottom = 928.65234
+theme_override_colors/default_color = Color(0, 0, 0, 0.87058824)
+theme_override_fonts/normal_font = ExtResource("32_facbu")
+theme_override_font_sizes/normal_font_size = 120
+text = "Finde deinen Weg durch das Labyrinth. 
+
+Wenn du die Mitte erreichst, wirst du die Natur besser hören als je zuvor."
+
+[node name="InteractPanel" type="Control" parent="MiniGames/L" unique_id=942896906]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2579.0
+offset_top = -297.0
+offset_right = 4243.8994
+offset_bottom = -45.0
+
+[node name="PanelContainer" type="PanelContainer" parent="MiniGames/L/InteractPanel" unique_id=1319081463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -39.000122
+offset_top = 52.0
+offset_right = -59.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jq2sk")
+
+[node name="InteractionLabel" type="Label" parent="MiniGames/L/InteractPanel/PanelContainer" unique_id=1557626383]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "You can interact with this part of the garden"
+horizontal_alignment = 1
+
+[node name="Interrogation" type="Sprite2D" parent="MiniGames/L" unique_id=1268388168]
+position = Vector2(2380, -129)
+texture = ExtResource("34_facbu")
+
+[node name="Jeu12" parent="MiniGames" unique_id=748132016 instance=ExtResource("30_kq58d")]
+visible = false
+position = Vector2(3939, -372)
+
+[node name="InteractPanel4" type="Control" parent="MiniGames/Jeu12" unique_id=78988230]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.9054084e-05
+offset_top = 1351.0
+offset_right = 1664.8994
+offset_bottom = 1603.0
+rotation = -1.5707964
+
+[node name="ExplanationPanel" type="Control" parent="MiniGames/Jeu12" unique_id=648008495]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1387.0001
+offset_top = 1487.0
+offset_right = 3516.0
+offset_bottom = 1861.0
+rotation = -1.5707964
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniGames/Jeu12/ExplanationPanel" unique_id=252517453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MiniGames/Jeu12/ExplanationPanel/MarginContainer" unique_id=194320460]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="MiniGames/Jeu12/ExplanationPanel/MarginContainer/VBoxContainer" unique_id=662486149]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/normal_font = ExtResource("32_htxhm")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "Dieser Garten vereint Blumen aus allen Jahreszeiten!
+[img={valign}]res://assets/Player1.png[/img] Lass die Erde sich um ihre eigene Achse [Commande] und um die Sonne [Commande] drehen. Du wirst sehen, wie sich die Blumenbeete entsprechend mitdrehen.
+[img={valign}]res://assets/Player2.png[/img] [img={valign}]res://assets/Player3.png[/img] Mach dich mit deiner Sonnenuhr auf die Suche nach der Sonne."
+
+[node name="Jeu6" parent="MiniGames" unique_id=1655635628 instance=ExtResource("36_b1qrp")]
+visible = false
+position = Vector2(3177.0002, 474.00012)
+
+[node name="Jeu5" parent="MiniGames" unique_id=389531052 instance=ExtResource("37_d2t1y")]
+visible = false
+
+[node name="G" type="Node2D" parent="MiniGames" unique_id=846902267 node_paths=PackedStringArray("polygon", "players")]
+visible = false
+script = ExtResource("38_0n3wm")
+polygon = NodePath("Polygon2D")
+players = [NodePath("P1"), NodePath("P2"), NodePath("P3")]
+
+[node name="Hp27" type="Sprite2D" parent="MiniGames/G" unique_id=482110738]
+position = Vector2(3502, 486)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("24_0cp0l")
+
+[node name="P1" parent="MiniGames/G" unique_id=1898938655 instance=ExtResource("38_gngh3")]
+modulate = Color(0, 0.7607843, 0.28235295, 1)
+position = Vector2(3294, 1052)
+input_left = &"g_p1_left"
+input_right = &"g_p1_right"
+input_up = &"g_p1_up"
+input_down = &"g_p1_down"
+osc_path_x = "/oscControl/miniGame/26/1/x"
+osc_path_y = "/oscControl/miniGame/26/1/y"
+
+[node name="P2" parent="MiniGames/G" unique_id=1120541084 instance=ExtResource("38_gngh3")]
+modulate = Color(0.9764706, 0, 0.8352941, 1)
+position = Vector2(3825, 1039)
+input_left = &"g_p2_left"
+input_right = &"g_p2_right"
+input_up = &"g_p2_up"
+input_down = &"g_p2_down"
+osc_path_x = "/oscControl/miniGame/26/2/x"
+osc_path_y = "/oscControl/miniGame/26/2/y"
+
+[node name="P3" parent="MiniGames/G" unique_id=701320716 instance=ExtResource("38_gngh3")]
+modulate = Color(0.9764706, 0, 0.8352941, 1)
+position = Vector2(3575, 1139)
+input_left = &"g_p3_left"
+input_right = &"g_p3_right"
+input_up = &"g_p3_up"
+input_down = &"g_p3_down"
+osc_path_x = "/oscControl/miniGame/26/3/x"
+osc_path_y = "/oscControl/miniGame/26/3/y"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MiniGames/G" unique_id=1378908017]
+collision_layer = 48
+collision_mask = 48
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MiniGames/G/StaticBody2D" unique_id=928763663]
+polygon = PackedVector2Array(2626, 1014, 2472, 1474, 4612, 1478, 4576, -328, 2610, 780, 2698, 1283, 3011, 869, 3233, 789, 4105, 784, 4241, 877, 4313, 1221, 2624, 1189)
+
+[node name="InteractPanel" type="Control" parent="MiniGames/G" unique_id=342805648]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2721.0
+offset_top = 1184.0
+offset_right = 4385.8994
+offset_bottom = 1436.0
+
+[node name="PanelContainer" type="PanelContainer" parent="MiniGames/G/InteractPanel" unique_id=1874103257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -39.000122
+offset_top = 52.0
+offset_right = -59.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gngh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniGames/G/InteractPanel/PanelContainer" unique_id=1715883881]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MiniGames/G/InteractPanel/PanelContainer/MarginContainer" unique_id=1716595478]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MiniGames/G/InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1988032030]
+layout_mode = 2
+texture = ExtResource("38_d2t1y")
+expand_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="MiniGames/G/InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1973769170]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = " Explore the cave "
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MiniGames/G/InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=166164673]
+layout_mode = 2
+texture = SubResource("Texture2D_0n3wm")
+expand_mode = 2
+
+[node name="InteractPanel2" type="Control" parent="MiniGames/G" unique_id=132168564]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 1777.9999
+offset_right = 1848.8994
+offset_bottom = 2029.9999
+
+[node name="PanelContainer" type="PanelContainer" parent="MiniGames/G/InteractPanel2" unique_id=313781826]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2503.4072
+offset_top = -260.14523
+offset_right = 2483.4072
+offset_bottom = -273.14523
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0n3wm")
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniGames/G/InteractPanel2/PanelContainer" unique_id=130563901]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MiniGames/G/InteractPanel2/PanelContainer/MarginContainer" unique_id=317505569]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MiniGames/G/InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=1435851398]
+layout_mode = 2
+texture = ExtResource("40_0n3wm")
+expand_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="MiniGames/G/InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=260282762]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = " Explore the cave "
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MiniGames/G/InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=1684652819]
+layout_mode = 2
+texture = SubResource("Texture2D_wnkbs")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="MiniGames/G/InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=2006871637]
+layout_mode = 2
+texture = SubResource("Texture2D_f6a44")
+expand_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="MiniGames/G" unique_id=1965861436]
+modulate = Color(1, 1, 1, 0.105882354)
+polygon = PackedVector2Array(3049, 790, 4217, 784, 4333, 1228, 2718, 1233)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=123733101]
+offset_left = 444.0
+offset_top = 1489.0
+offset_right = 1276.0
+offset_bottom = 2321.0
+rotation = -1.5707964
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=692150199]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MiniMap" type="TextureRect" parent="PanelContainer/MarginContainer" unique_id=776092045]
+layout_mode = 2
+texture = SubResource("ViewportTexture_4k2k6")
+
+[node name="MiniMapPlayer" type="Sprite2D" parent="." unique_id=1173534241]
+position = Vector2(874, 1064)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_272bh")
+
+[node name="Control" type="Control" parent="MiniMapPlayer" unique_id=471682141]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_right = -110.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="DebugLabel" type="Label" parent="MiniMapPlayer/Control" unique_id=1107337802]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 514.0
+offset_top = -998.0
+offset_right = 1101.0
+offset_bottom = -784.0
+theme_override_colors/font_color = Color(1, 0.13, 0.13, 1)
+theme_override_font_sizes/font_size = 100
+text = "debug value"
+
+[node name="Help" type="PanelContainer" parent="MiniMapPlayer" unique_id=749047800]
+offset_left = -1706.0
+offset_top = -1446.0
+offset_right = 606.0
+offset_bottom = -1064.0
+script = ExtResource("37_0cp0l")
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniMapPlayer/Help" unique_id=578451]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MiniMapPlayer/Help/MarginContainer" unique_id=1425789487]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer" unique_id=1793563708]
+layout_mode = 2
+
+[node name="Player Icon" type="TextureRect" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1085499127]
+layout_mode = 2
+texture = ExtResource("38_d2t1y")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1924851160]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = " You can move with "
+
+[node name="MainPlayerMoveControlsIcon" type="TextureRect" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1662637587]
+layout_mode = 2
+texture = SubResource("Texture2D_qnost")
+expand_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer" unique_id=1538414311]
+layout_mode = 2
+
+[node name="Player Icon" type="TextureRect" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=751058357]
+layout_mode = 2
+texture = ExtResource("40_0n3wm")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MiniMapPlayer/Help/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1883175034]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = " Take the pink controller to interact when needed"
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=991922684]
+size = Vector2i(800, 800)
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=274333853 node_paths=PackedStringArray("target")]
+visibility_layer = 2
+zoom = Vector2(2.5, 2.5)
+script = ExtResource("32_4k2k6")
+target = NodePath("../../CharacterInPlan")
+
+[node name="PlayerMarker" type="Node2D" parent="SubViewport/Camera2D" unique_id=1864934727]
+visibility_layer = 2
+scale = Vector2(0.2, 0.2)
+
+[node name="PlayerSprite" type="Sprite2D" parent="SubViewport/Camera2D/PlayerMarker" unique_id=11652061]
+visibility_layer = 2
+texture = ExtResource("7_272bh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewport/Camera2D/PlayerMarker/PlayerSprite" unique_id=1549166508]
+libraries/ = SubResource("AnimationLibrary_kek77")
+autoplay = &"idle"
+
+[node name="Iconographie" type="Sprite2D" parent="SubViewport" unique_id=1126286232]
+visibility_layer = 2
+texture = ExtResource("4_jq2sk")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Node" type="Node" parent="SubViewport" unique_id=276649067]

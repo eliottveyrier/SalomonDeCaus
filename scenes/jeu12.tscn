@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bd358eaeifee4"]
 
-[ext_resource type="Script" uid="uid://hqsmq45cwrgx" path="res://jeu_12.gd" id="1_5le5c"]
+[ext_resource type="Script" uid="uid://hqsmq45cwrgx" path="res://scenes/jeu_12.gd" id="1_5le5c"]
 [ext_resource type="Texture2D" uid="uid://bp080kbgcyy6v" path="res://assets/Jeu12_roue_int.png" id="2_qjy3u"]
 [ext_resource type="Texture2D" uid="uid://drnwwcg8fwjxp" path="res://assets/Jeu12_roue_ext.png" id="3_jctft"]
 [ext_resource type="Texture2D" uid="uid://b7r7nbemo66im" path="res://assets/jeu12.png" id="4_ma162"]
 [ext_resource type="Script" uid="uid://dps7ajndnnmjo" path="res://scenes/ombre.gd" id="5_qjy3u"]
 [ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="6_o7e62"]
-[ext_resource type="PackedScene" uid="uid://b6q63xb28qwss" path="res://marker_jeu_12.tscn" id="6_w8sod"]
+[ext_resource type="PackedScene" uid="uid://b6q63xb28qwss" path="res://scenes/marker_jeu_12.tscn" id="6_w8sod"]
 [ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="7_w8sod"]
 [ext_resource type="Texture2D" uid="uid://bhiec4m01fydv" path="res://assets/Player2.png" id="9_4i63n"]
 

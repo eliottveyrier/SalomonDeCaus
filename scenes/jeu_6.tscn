@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cuvl58lmvyv3k"]
 
 [ext_resource type="Texture2D" uid="uid://xiexmsy80yw3" path="res://assets/marion/hp_6_3d.png" id="1_l2mma"]
-[ext_resource type="Script" uid="uid://csmo2eknvi45d" path="res://jeu_6.gd" id="2_bumy3"]
+[ext_resource type="Script" uid="uid://csmo2eknvi45d" path="res://scenes/jeu_6.gd" id="2_bumy3"]
 [ext_resource type="Texture2D" uid="uid://dt218ens3o4et" path="res://assets/Interrogation.png" id="2_rcw6l"]
-[ext_resource type="PackedScene" uid="uid://dqqcvvtaycalu" path="res://marker_jeu_6.tscn" id="3_bumy3"]
+[ext_resource type="PackedScene" uid="uid://dqqcvvtaycalu" path="res://scenes/marker_jeu_6.tscn" id="3_bumy3"]
 [ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="3_oo04d"]
-[ext_resource type="Script" uid="uid://blfv0f2qqhwdy" path="res://HarmonicArea.gd" id="4_crcki"]
+[ext_resource type="Script" uid="uid://blfv0f2qqhwdy" path="res://scripts/HarmonicArea.gd" id="4_crcki"]
 [ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="4_phkra"]
 [ext_resource type="Texture2D" uid="uid://bhiec4m01fydv" path="res://assets/Player2.png" id="5_h1vc0"]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://busldc7u8do0"]
 
-[ext_resource type="Script" uid="uid://d75pomhy6oe2" path="res://jeu_5.gd" id="1_wo2qf"]
+[ext_resource type="Script" uid="uid://d75pomhy6oe2" path="res://scenes/jeu_5.gd" id="1_wo2qf"]
 [ext_resource type="Texture2D" uid="uid://bvvfmeb7eiajf" path="res://assets/marion/hp_5_3d.png" id="2_vmudp"]
 [ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="3_adow6"]
 [ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="4_e0j6p"]
