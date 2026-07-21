@@ -35,8 +35,8 @@ var registered_commands : Dictionary[String,Callable] = {
 }
 
 func list_commands():
-	for name in registered_commands:
-		info(name)
+	for _name in registered_commands:
+		info(_name)
 
 func register(name, callable):
 	registered_commands[name] = callable

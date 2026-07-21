@@ -1,4 +1,5 @@
 extends Polygon2D
+class_name Ombre
 
 @export var tip : Vector2
 @export var pyramid_height_pct : float = 0.2
@@ -30,8 +31,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	_tip = tip.rotated(Time.get_ticks_msec()/1000.)
-	_tip = tip * (1+sin(2.52651351321351 * Time.get_ticks_msec()/1000. + 5.598181651))
+	if tip == _tip:
+		return
+	_tip = tip
 	make_polygon()
 	
 
@@ -42,6 +44,7 @@ func make_polygon():
 	var left = _rect.get_support(-perp)
 	var right = _rect.get_support(perp)
 	var d = (_center - _tip).length() / 75.
+	d = clamp(d,1.1,3.)
 	
 	var depth_scale = 1.0 / max(d, 0.01)
 	var half_shadow_width = (_rect.size.length() * 0.5) * depth_scale

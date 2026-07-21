@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var osc_sender = %OscSender
-
 func _ready() -> void:
 	Commands.register(
 		"hide-sceno", 

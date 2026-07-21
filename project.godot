@@ -19,12 +19,15 @@ config/description="Interactive art project for Salomon de Caus' 400th anniversa
 config/version="1.1.0"
 run/main_scene="uid://bhxnt5ih4kgma"
 config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/bg_color=Color(0.85490197, 0.80784315, 0.7490196, 1)
 config/icon="uid://dl0701ikiyhue"
 
 [autoload]
 
 OscSettings="*uid://da2wgb01agedi"
 Commands="*uid://2h2ivg8q7qw5"
+ControllerIcons="*uid://c0cyyge4aleny"
+Settings="*uid://b83tt2bggm8hq"
 
 [display]
 
@@ -32,12 +35,195 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=4
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/controller_icons/plugin.cfg")
+
 [input]
 
 toggle_console={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
+}
+main_move_down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+main_move_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+main_move_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+main_move_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+p2_move_down={
+"deadzone": 0.2,
+"events": []
+}
+p2_move_up={
+"deadzone": 0.2,
+"events": []
+}
+p2_move_left={
+"deadzone": 0.2,
+"events": []
+}
+p2_move_right={
+"deadzone": 0.2,
+"events": []
+}
+p3_move_down={
+"deadzone": 0.2,
+"events": []
+}
+p3_move_up={
+"deadzone": 0.2,
+"events": []
+}
+p3_move_left={
+"deadzone": 0.2,
+"events": []
+}
+p3_move_right={
+"deadzone": 0.2,
+"events": []
+}
+rotate_outside_left={
+"deadzone": 0.2,
+"events": []
+}
+rotate_outside_right={
+"deadzone": 0.2,
+"events": []
+}
+rotate_inside_left={
+"deadzone": 0.2,
+"events": []
+}
+rotate_inside_right={
+"deadzone": 0.2,
+"events": []
+}
+p2_alpha_down={
+"deadzone": 0.2,
+"events": []
+}
+p2_alpha_up={
+"deadzone": 0.2,
+"events": []
+}
+p2_beta_down={
+"deadzone": 0.2,
+"events": []
+}
+p2_beta_up={
+"deadzone": 0.2,
+"events": []
+}
+p3_alpha_down={
+"deadzone": 0.2,
+"events": []
+}
+p3_alpha_up={
+"deadzone": 0.2,
+"events": []
+}
+p3_beta_down={
+"deadzone": 0.2,
+"events": []
+}
+p3_beta_up={
+"deadzone": 0.2,
+"events": []
+}
+p1_move_left={
+"deadzone": 0.2,
+"events": []
+}
+p1_move_right={
+"deadzone": 0.2,
+"events": []
+}
+p1_move_down={
+"deadzone": 0.2,
+"events": []
+}
+p1_move_up={
+"deadzone": 0.2,
+"events": []
+}
+help={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":104,"location":0,"echo":false,"script":null)
+]
+}
+muses_tilt_head_left={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
+]
+}
+muses_tilt_head_right={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
+]
+}
+g_p1_left={
+"deadzone": 0.2,
+"events": []
+}
+g_p1_right={
+"deadzone": 0.2,
+"events": []
+}
+g_p1_down={
+"deadzone": 0.2,
+"events": []
+}
+g_p1_up={
+"deadzone": 0.2,
+"events": []
+}
+g_p2_left={
+"deadzone": 0.2,
+"events": []
+}
+g_p2_right={
+"deadzone": 0.2,
+"events": []
+}
+g_p2_down={
+"deadzone": 0.2,
+"events": []
+}
+g_p2_up={
+"deadzone": 0.2,
+"events": []
+}
+g_p3_left={
+"deadzone": 0.2,
+"events": []
+}
+g_p3_right={
+"deadzone": 0.2,
+"events": []
+}
+g_p3_down={
+"deadzone": 0.2,
+"events": []
+}
+g_p3_up={
+"deadzone": 0.2,
+"events": []
 }
 
 [rendering]

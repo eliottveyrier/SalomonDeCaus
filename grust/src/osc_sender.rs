@@ -49,7 +49,6 @@ impl OscSender {
 
     /// Internal helper to send an OSC message with the given arguments.
     fn _send_message(&mut self, addr: String, args: Vec<rosc::OscType>) -> bool {
-        godot_print!("{}", &addr);
         if self.target.is_empty() {
             godot_print!("Error: No target configured");
             return false;

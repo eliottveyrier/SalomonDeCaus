@@ -9,18 +9,26 @@ class_name Player
 ### The target to move on the scenography
 @export var target : Node2D
 
-var _old_X : float 
-var _old_Y : float
+@export var rate_limit : int = 10
 
-func _process(_delta):
-	broadcast_position_osc()
+var _frame_counter : int = 0
 
+func _ready() -> void:
+	Commands.register("set-speed",
+		func (...args):
+			if args.is_empty():
+				Commands.error("please provide a value. it's currently %f" % max_speed)
+				
+				return 
+			var _speed = float(args[0]);
+			Commands.info("setting speed to %f" % _speed)
+			max_speed = _speed
+	)
 
 func _physics_process(delta):
-	print(_translate_to_perspective())
 	# Get input vector (built-in helper uses ui actions) 
 	# this one is switched up to feel right on the final scenography
-	var input_vector = Input.get_vector("ui_down", "ui_up", "ui_left", "ui_right")
+	var input_vector = Input.get_vector("main_move_down", "main_move_up", "main_move_left", "main_move_right")
 	if input_vector != Vector2.ZERO:
 		input_vector = input_vector.normalized()
 		velocity = velocity.move_toward(input_vector * max_speed, acceleration * delta)
@@ -28,6 +36,7 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 	move_and_slide()
 	target.global_position = _translate_to_perspective_v2()
+	broadcast_position_osc()
 
 func _translate_to_perspective() -> Vector2 :
 	var x = global_position.x
@@ -49,19 +58,18 @@ func _translate_to_perspective() -> Vector2 :
 	return Vector2(xprime,yprime)
 
 func broadcast_position_osc():
+	if _frame_counter < rate_limit:
+		_frame_counter += 1
+		return
+	_frame_counter = 0
 	var x = global_position.x
 	var y = global_position.y
-	var X = 0.01156 * (x - 148)
-	var Y = 0.01156 * (y - 438)
-	if _old_X == X && _old_Y == Y:
-		return
-	_old_X = X
-	_old_Y = Y
-	var senders = OscSettings.get_senders()
-	for name in senders:
-		var sender : OscSender = senders[name]
-		sender.send_float(osc_address_x , X)
-		sender.send_float(osc_address_y , Y)
+	var X = 0.01156 * (x - 148.)
+	var Y = 0.01156 * (y - 438.)
+	%DebugLabel.text = "X = " + str(X) + " , Y = " + str(Y)
+	
+	OscSettings.broadcastf(osc_address_x, X)
+	OscSettings.broadcastf(osc_address_y, Y)
 
 func _translate_to_perspective_v2() -> Vector2:
 	var x = global_position.x

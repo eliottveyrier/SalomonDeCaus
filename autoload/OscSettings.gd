@@ -16,7 +16,14 @@ func _ready():
 				var ip = args[0];
 				Commands.info("changing %s ip" % sender)
 				Commands.info("setting ip to %s" % ip)
+				var s = senders[sender]
+				s.target = ip
 	)
+
+func broadcastf(key : String, value : float):
+	for _name in senders:
+		var sender: OscSender = senders[_name]
+		sender.send_float(key, value)
 
 func get_senders() -> Dictionary[String, OscSender]:
 	return senders

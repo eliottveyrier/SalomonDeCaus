@@ -1,13 +1,69 @@
 [gd_scene format=3 uid="uid://bd358eaeifee4"]
 
-[ext_resource type="Script" uid="uid://hqsmq45cwrgx" path="res://jeu_5.gd" id="1_5le5c"]
+[ext_resource type="Script" uid="uid://hqsmq45cwrgx" path="res://jeu_12.gd" id="1_5le5c"]
 [ext_resource type="Texture2D" uid="uid://bp080kbgcyy6v" path="res://assets/Jeu12_roue_int.png" id="2_qjy3u"]
 [ext_resource type="Texture2D" uid="uid://drnwwcg8fwjxp" path="res://assets/Jeu12_roue_ext.png" id="3_jctft"]
 [ext_resource type="Texture2D" uid="uid://b7r7nbemo66im" path="res://assets/jeu12.png" id="4_ma162"]
 [ext_resource type="Script" uid="uid://dps7ajndnnmjo" path="res://scenes/ombre.gd" id="5_qjy3u"]
+[ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="6_o7e62"]
+[ext_resource type="PackedScene" uid="uid://b6q63xb28qwss" path="res://marker_jeu_12.tscn" id="6_w8sod"]
+[ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="7_w8sod"]
+[ext_resource type="Texture2D" uid="uid://bhiec4m01fydv" path="res://assets/Player2.png" id="9_4i63n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i63n"]
+bg_color = Color(0.17362538, 0.8133787, 0.32156637, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Texture2D" id="Texture2D_w8sod"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("7_w8sod")
+path = "joypad/lt"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="Texture2D" id="Texture2D_iej5e"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("7_w8sod")
+path = "joypad/lb"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="Texture2D" id="Texture2D_jkxt5"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("7_w8sod")
+path = "joypad/rb"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="Texture2D" id="Texture2D_4i63n"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("7_w8sod")
+path = "joypad/rt"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="Texture2D" id="Texture2D_dakw7"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("7_w8sod")
+path = "joypad/r_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5rtp"]
+bg_color = Color(0.93753004, 0.46530002, 0.99, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Jeu12" type="Node2D" unique_id=748132016]
+rotation = 1.5707964
 script = ExtResource("1_5le5c")
+deg_per_second = 0.3
+use_theta1 = false
 
 [node name="RoueInterieure" type="Sprite2D" parent="." unique_id=854272521]
 position = Vector2(941, 419)
@@ -25,6 +81,15 @@ texture = ExtResource("4_ma162")
 offset = Vector2(-41, 20)
 
 [node name="Ombre1" type="Polygon2D" parent="." unique_id=1419972484]
+modulate = Color(0.2604053, 0.058378816, 0.12781006, 0.67058825)
+position = Vector2(896, 465)
+antialiased = true
+polygon = PackedVector2Array(-2, -97, 89, -97, 89, -4, -2, -4)
+uv = PackedVector2Array(-4, -97, 90, -97, 91, -4, -4, -5)
+script = ExtResource("5_qjy3u")
+tip = Vector2(-100, -100)
+
+[node name="Ombre2" type="Polygon2D" parent="." unique_id=952243498]
 modulate = Color(0.12239999, 0.13416001, 0.24, 0.67058825)
 position = Vector2(896, 465)
 antialiased = true
@@ -32,3 +97,177 @@ polygon = PackedVector2Array(-2, -97, 89, -97, 89, -4, -2, -4)
 uv = PackedVector2Array(-4, -97, 90, -97, 91, -4, -4, -5)
 script = ExtResource("5_qjy3u")
 tip = Vector2(-100, -100)
+
+[node name="P1" parent="." unique_id=689554807 instance=ExtResource("6_w8sod")]
+modulate = Color(0, 0.7607843, 0.28235295, 1)
+position = Vector2(738.00006, 1136)
+rotation = -1.5707964
+
+[node name="P2" parent="." unique_id=1811851083 instance=ExtResource("6_w8sod")]
+modulate = Color(0.9764706, 0, 0.8352941, 1)
+position = Vector2(1115, -283.00006)
+rotation = -1.5707964
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2123874011]
+
+[node name="InteractPanel" type="Control" parent="." unique_id=622210002]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -64.99994
+offset_top = 1290.0
+offset_right = 1599.8994
+offset_bottom = 1542.0
+rotation = -1.5707964
+
+[node name="PanelContainer" type="PanelContainer" parent="InteractPanel" unique_id=1330538665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.00006
+offset_top = 65.0
+offset_right = 191.10059
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4i63n")
+
+[node name="MarginContainer" type="MarginContainer" parent="InteractPanel/PanelContainer" unique_id=885540400]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractPanel/PanelContainer/MarginContainer" unique_id=573418977]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1889112451]
+layout_mode = 2
+texture = ExtResource("6_o7e62")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1036408282]
+layout_mode = 2
+texture = SubResource("Texture2D_w8sod")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=488197501]
+layout_mode = 2
+texture = SubResource("Texture2D_iej5e")
+expand_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1193544715]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Rotate the sun and earth"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1079679727]
+layout_mode = 2
+texture = SubResource("Texture2D_jkxt5")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="InteractPanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=864806271]
+layout_mode = 2
+texture = SubResource("Texture2D_4i63n")
+expand_mode = 2
+
+[node name="InteractPanel2" type="Control" parent="." unique_id=550505585]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2186.0
+offset_top = 1161.0
+offset_right = 3850.8994
+offset_bottom = 1413.0
+rotation = -1.5707964
+
+[node name="PanelContainer" type="PanelContainer" parent="InteractPanel2" unique_id=1716014874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1444.0
+offset_top = -765.9999
+offset_right = -1463.9999
+offset_bottom = -778.9999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4i63n")
+
+[node name="MarginContainer" type="MarginContainer" parent="InteractPanel2/PanelContainer" unique_id=432579672]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractPanel2/PanelContainer/MarginContainer" unique_id=2095544930]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=983405404]
+layout_mode = 2
+texture = ExtResource("6_o7e62")
+expand_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=192325435]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Move your sundial (Sonnenuhr)"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="InteractPanel2/PanelContainer/MarginContainer/HBoxContainer" unique_id=1362175102]
+layout_mode = 2
+texture = SubResource("Texture2D_dakw7")
+expand_mode = 2
+
+[node name="InteractPanel3" type="Control" parent="." unique_id=589434288]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1381.0
+offset_top = 1569.0
+offset_right = 3045.8994
+offset_bottom = 1821.0
+rotation = -1.5707964
+
+[node name="PanelContainer" type="PanelContainer" parent="InteractPanel3" unique_id=1963201652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 660.0
+offset_top = 57.000122
+offset_right = 640.0
+offset_bottom = 44.000122
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5rtp")
+
+[node name="MarginContainer" type="MarginContainer" parent="InteractPanel3/PanelContainer" unique_id=1922205816]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractPanel3/PanelContainer/MarginContainer" unique_id=887336351]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="InteractPanel3/PanelContainer/MarginContainer/HBoxContainer" unique_id=620428942]
+layout_mode = 2
+texture = ExtResource("9_4i63n")
+expand_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="InteractPanel3/PanelContainer/MarginContainer/HBoxContainer" unique_id=1472436788]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Move your sundial (Sonnenuhr)"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="InteractPanel3/PanelContainer/MarginContainer/HBoxContainer" unique_id=1759039946]
+layout_mode = 2
+texture = SubResource("Texture2D_dakw7")
+expand_mode = 2

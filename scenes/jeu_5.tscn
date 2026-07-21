@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://busldc7u8do0"]
+
+[ext_resource type="Script" uid="uid://d75pomhy6oe2" path="res://jeu_5.gd" id="1_wo2qf"]
+[ext_resource type="Texture2D" uid="uid://bvvfmeb7eiajf" path="res://assets/marion/hp_5_3d.png" id="2_vmudp"]
+[ext_resource type="Texture2D" uid="uid://bk0w2jf5np5as" path="res://assets/Player1.png" id="3_adow6"]
+[ext_resource type="Script" uid="uid://h4fu10v2wsi" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="4_e0j6p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2t1y"]
+bg_color = Color(0.22008058, 0.983893, 0.3941994, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Texture2D" id="Texture2D_gngh3"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("4_e0j6p")
+path = "joypad/r_stick"
+metadata/_custom_type_script = "uid://h4fu10v2wsi"
+
+[node name="Jeu5" type="Node2D" unique_id=389531052]
+script = ExtResource("1_wo2qf")
+
+[node name="Hp53d2" type="Sprite2D" parent="." unique_id=1167893873]
+position = Vector2(3417, 388)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_vmudp")
+
+[node name="MusesConcert" type="Control" parent="." unique_id=941712198]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2557.0
+offset_top = 894.0
+offset_right = 4221.8994
+offset_bottom = 1146.0
+
+[node name="PanelContainer" type="PanelContainer" parent="MusesConcert" unique_id=2070719454]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -39.000122
+offset_top = 52.0
+offset_right = -59.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2t1y")
+
+[node name="MarginContainer" type="MarginContainer" parent="MusesConcert/PanelContainer" unique_id=1354645809]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MusesConcert/PanelContainer/MarginContainer" unique_id=2030293814]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MusesConcert/PanelContainer/MarginContainer/HBoxContainer" unique_id=467793436]
+layout_mode = 2
+texture = ExtResource("3_adow6")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MusesConcert/PanelContainer/MarginContainer/HBoxContainer" unique_id=594028627]
+layout_mode = 2
+
+[node name="InteractionLabel" type="Label" parent="MusesConcert/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=244038583]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "The Muses have a concert for you... "
+horizontal_alignment = 1
+
+[node name="InteractionLabel2" type="Label" parent="MusesConcert/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1548241530]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "You can tilt your head with"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MusesConcert/PanelContainer/MarginContainer/HBoxContainer" unique_id=688134546]
+layout_mode = 2
+texture = SubResource("Texture2D_gngh3")
+expand_mode = 2
